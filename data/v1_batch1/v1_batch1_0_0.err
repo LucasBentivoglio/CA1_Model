@@ -1,0 +1,4 @@
+[mpiexec@Lucas] match_arg (../../../../../src/pm/i_hydra/libhydra/arg/hydra_arg.c:82): unrecognized argument oversubscribe
+[mpiexec@Lucas] HYD_arg_parse_array (../../../../../src/pm/i_hydra/libhydra/arg/hydra_arg.c:106): argument matching returned error
+[mpiexec@Lucas] mpiexec_get_parameters (../../../../../src/pm/i_hydra/mpiexec/mpiexec_params.c:1211): error parsing input array
+[mpiexec@Lucas] main (../../../../../src/pm/i_hydra/mpiexec/mpiexec.c:1727): error parsing parameters
