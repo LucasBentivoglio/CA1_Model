@@ -11,7 +11,7 @@ from netpyne import specs
 ## Population parameters
 cfg = specs.SimConfig()					# object of class SimConfig to store simulation configuration
 
-cfg.duration = 100
+cfg.duration = 1000
 cfg.starttime = 0
 cfg.seedval = 42
 
@@ -144,6 +144,7 @@ cfg.analysis['plotRaster'] = { #'saveData': 'raster_data_' + str(runnum) + '.jso
                               'include': ['artif_pyr', 'PYR_pop', 'PVBC_pop', 'OLM_pop'],
                                     'marker': 'o',
                                     'saveFig': True, 
+                                    'saveFigPath': 'data/v1_batch1/v1_batch1_0_0/',
                                     'showFig': False, 
                                     'markerSize': 6}
 
@@ -154,8 +155,8 @@ cfg.recordTraces['V_soma'] = {'sec':'soma_0','loc':0.5,'var':'v'}
     
 cfg.analysis['plotTraces'] = { 
                                         'include': list(range(4)), 
-                                      
                                         'saveFig': True, 
+                                        'saveFigPath': 'data/v1_batch1/v1_batch1_0_0/',
                                         'showFig': False,
                                  
                                         } # Plot cell traces 
