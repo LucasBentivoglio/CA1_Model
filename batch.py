@@ -36,7 +36,7 @@ def batchTauWeight():
         os.makedirs(b.saveFolder)
     
     # LOCAL EXECUTION (not SLURM)
-    doslurm = False
+    doslurm = True #False
     
     if doslurm:
         b.runCfg = {
@@ -46,8 +46,8 @@ def batchTauWeight():
             'walltime': '2:00:00',
             'nodes': 1,
             'coresPerNode': 128,
-            'email': 'fernandodasilvaborges@gmail.com',
-            'folder': '/home/fborges/plosCB-PAC/t42_data-p2/',
+            'email': 'lucas16edu@gmail.com',
+            'folder': '/home/lbentivoglio/expanse/CA1_Model/',
             'script': 'init.py',
             'mpiCommand': 'mpirun',
             'custom': '#SBATCH --mem=240G\n#SBATCH --export=ALL\n#SBATCH --partition=compute',
