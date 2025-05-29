@@ -47,7 +47,7 @@ def batchTauWeight():
             'nodes': 1,
             'coresPerNode': 128,
             'email': 'lucas16edu@gmail.com',
-            'folder': '/home/lbentivoglio/expanse/CA1_Model/',
+            'folder': '/home/lbentivoglio/CA1_Model/',
             'script': 'init.py',
             'mpiCommand': 'mpirun',
             'custom': '#SBATCH --mem=240G\n#SBATCH --export=ALL\n#SBATCH --partition=compute',
