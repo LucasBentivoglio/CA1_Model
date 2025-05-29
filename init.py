@@ -5,12 +5,14 @@ Created on Tue Feb  2 14:48:06 2021
 
 @author: adam
 """
-# from neuron import h
-# h.nrnmpi_init()
-
+import os
 from netpyne import sim
 
-# read cfg and netParams from command line arguments if available; otherwise use default
+# Make sure output directory exists
+output_dir = 'data/v1_batch1/v1_batch1_0_0'
+os.makedirs(output_dir, exist_ok=True)
+
+# Read cfg and netParams from command line arguments if available; otherwise use default
 simConfig, netParams = sim.readCmdLineArgs(simConfigDefault='cfg.py', 
                                            netParamsDefault='netParams.py')
 

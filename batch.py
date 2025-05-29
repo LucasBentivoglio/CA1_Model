@@ -36,8 +36,7 @@ def batchTauWeight():
         os.makedirs(b.saveFolder)
     
     # LOCAL EXECUTION (not SLURM)
-    doslurm = True #False
-    
+    doslurm = True    
     if doslurm:
         b.runCfg = {
             'type': 'hpc_slurm',
