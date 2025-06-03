@@ -41,7 +41,7 @@ def batchTauWeight():
         b.runCfg = {
             'type': 'hpc_slurm',
             'allocation': 'TG-MED240050',
-            'partition': 'compute',
+            'partition': 'shared',
             'walltime': '2:00:00',
             'nodes': 1,
             'coresPerNode': 128,
@@ -49,7 +49,7 @@ def batchTauWeight():
             'folder': '/home/lbentivoglio/CA1_Model/',
             'script': 'init.py',
             'mpiCommand': 'mpirun',
-            'custom': '#SBATCH --mem=240G\n#SBATCH --export=ALL\n#SBATCH --partition=compute',
+            'custom': '#SBATCH --mem=240G\n#SBATCH --export=ALL\n#SBATCH --partition=shared',
             'skip': True
         }
     # else:
