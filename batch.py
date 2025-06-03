@@ -43,7 +43,7 @@ def batchTauWeight():
             'allocation': 'TG-MED240050',
             'partition': 'shared',
             'walltime': '2:00:00',
-            'nodes': 1,
+            'nodes': 24,
             'coresPerNode': 128,
             'email': 'lucas16edu@gmail.com',
             'folder': '/home/lbentivoglio/CA1_Model/',

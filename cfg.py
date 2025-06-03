@@ -141,7 +141,7 @@ cfg.saveFileStep = 1000 # step size in ms to save data to disk
 
 
 cfg.analysis['plotRaster'] = {
-    'include': ['artif_pyr', 'PYR_pop', 'PVBC_pop', 'OLM_pop'],
+    'include': ['PYR_pop', 'PVBC_pop', 'OLM_pop'], #'artif_pyr', 
     'marker': 'o',
     'saveFig': True,
     'filename': 'data/v1_batch1/v1_batch1_0_0/plotRaster.png',
