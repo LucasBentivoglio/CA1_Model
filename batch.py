@@ -52,14 +52,14 @@ def batchTauWeight():
             'custom': '#SBATCH --mem=240G\n#SBATCH --export=ALL\n#SBATCH --partition=compute',
             'skip': True
         }
-    else:
-        b.runCfg = {
-            'type': 'mpi_direct',
-            'cores': 4,  # Adjust if needed
-            'mpiCommand': 'mpiexec',  # Use 'mpiexec' for local execution
-            'script': 'init.py',
-            'skip': False  # <<< this must be False to actually run
-        }
+    # else:
+    #     b.runCfg = {
+    #         'type': 'mpi_direct',
+    #         'cores': 4,  # Adjust if needed
+    #         'mpiCommand': 'mpiexec',  # Use 'mpiexec' for local execution
+    #         'script': 'init.py',
+    #         'skip': False  # <<< this must be False to actually run
+    #     }
     
     # Run the batch simulations
     b.run()
