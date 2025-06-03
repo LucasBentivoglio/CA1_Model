@@ -16,11 +16,11 @@ cfg.starttime = 0
 cfg.seedval = 42
 
 cfg.pyrpopsize = 480
-cfg.pcscalenum = 20 
+cfg.pcscalenum = 20 # Control how densely connected this cells are.
 cfg.pvbcpopsize = 20
-cfg.pvscalenum = 1
+cfg.pvscalenum = 1 # Control how densely connected this cells are. 
 cfg.olmpopsize = 20
-cfg.olmscalenum = 1 
+cfg.olmscalenum = 1  # Control how densely connected this cells are.
 
 cfg.connectPC2PC = False # False
 cfg.connectPVBC2PVBC = False # False
@@ -144,7 +144,7 @@ cfg.analysis['plotRaster'] = {
     'include': ['artif_pyr', 'PYR_pop', 'PVBC_pop', 'OLM_pop'],
     'marker': 'o',
     'saveFig': True,
-    'filename': 'data/v1_batch1/v1_batch1_0_0/plotRaster.png',
+    'filename': 'data/v1_batch1_0_0/plotRaster.png',
     'showFig': False,
     'markerSize': 6
 }
@@ -154,7 +154,7 @@ cfg.recordTraces['V_soma'] = {'sec': 'soma_0', 'loc': 0.5, 'var': 'v'}
 cfg.analysis['plotTraces'] = {
     'include': list(range(4)),
     'saveFig': True,
-    'filename': 'data/v1_batch1/v1_batch1_0_0/plotTraces.png',
+    'filename': 'data/v1_batch1_0_0/plotTraces.png',
     'showFig': False
 }
     
