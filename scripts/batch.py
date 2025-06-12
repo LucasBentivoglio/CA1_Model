@@ -24,7 +24,7 @@ def batchTauWeight():
     params['seedval'] = list(range(0 + seedbase, 100 + seedbase, 100))  # This gives [576667]
     
     # Define batch object with parameters to explore
-    b = Batch(params=params, cfgFile='src/cfg.py', netParamsFile='src/netParams.py')
+    b = Batch(params=params, cfgFile='scr/cfg.py', netParamsFile='scr/netParams.py')
     
     # Set batch metadata
     b.batchLabel = 'v1_batch1'
@@ -47,7 +47,7 @@ def batchTauWeight():
             'coresPerNode': 128,
             'email': 'lucas16edu@gmail.com',
             'folder': '/home/lbentivoglio/CA1_Model/',
-            'script': 'src/init.py',
+            'script': 'scr/init.py',
             'mpiCommand': 'mpirun',
             'custom': '#SBATCH --mem=240G\n#SBATCH --export=ALL\n#SBATCH --partition=shared',
             'skip': True
