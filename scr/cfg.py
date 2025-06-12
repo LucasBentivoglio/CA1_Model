@@ -128,7 +128,7 @@ cfg.artifpyrpars['artifsynfact'] = 6
 
 cfg.cvode_active = True
 cfg.dt = 0.025
-cfg.hParams = {'v_init': -65, 'celsius': 34} #, 'clamp_resist': 0.001}
+cfg.hParams = {'v_init': -65, 'celsius': 34} #, 'clamp_resist': 0.001
 cfg.verbose = False
 
 cfg.distributeSynsUniformly = False
@@ -156,5 +156,8 @@ cfg.analysis['plotTraces'] = {
     'showFig': False
 }
     
-cfg.saveJson = True
+cfg.saveJson = False
+cfg.saveCfgJson = False
+cfg.savePickle = True
+cfg.saveCfgPickle = True
 cfg.seeds = {'conn': cfg.seedval + 7515, 'stim': cfg.seedval + 84331, 'loc': cfg.seedval + 943}

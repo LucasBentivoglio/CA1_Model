@@ -41,7 +41,7 @@ somator=True
 if cfg.pvbcpopsize>0:
 
     netParams.importCellParams(label='PVBC_rule', conds= {'cellType': 'PVBC', 'cellModel': 'PVBC'},
-          	fileName='pvbc.hoc',cellName='cNACnoljp', somaAtOrigin=somator)
+          	fileName='data/raw/pvbc.hoc',cellName='cNACnoljp', somaAtOrigin=somator)
     
     netParams.popParams['PVBC_pop'] = {'cellType': 'PVBC', 
                                        'numCells': cfg.pvbcpopsize, 
@@ -52,7 +52,7 @@ if cfg.pvbcpopsize>0:
 if cfg.olmpopsize>0:
     
     netParams.importCellParams(label='OLM_rule', conds= {'cellType': 'OLM', 'cellModel': 'OLM'},
-       	fileName = 'olm.hoc', cellName='INT_cAC_noljp', somaAtOrigin=somator)
+       	fileName = 'data/raw/olm.hoc', cellName='INT_cAC_noljp', somaAtOrigin=somator)
         
               
     netParams.popParams['OLM_pop'] = {'cellType': 'OLM',
@@ -62,7 +62,7 @@ if cfg.olmpopsize>0:
  
 if cfg.pyrpopsize>0:
     netParams.importCellParams(label='PYR_rule', conds= {'cellType': 'PYR', 'cellModel': 'PYR'},
-          	fileName='pyr.hoc', cellName ='CA1_PC_cAC_sig', somaAtOrigin=somator)
+          	fileName='data/raw/pyr.hoc', cellName ='CA1_PC_cAC_sig', somaAtOrigin=somator)
     
     
     netParams.popParams['PYR_pop'] = {'cellType': 'PYR', 
