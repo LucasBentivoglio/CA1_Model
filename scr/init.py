@@ -8,13 +8,13 @@ Created on Tue Feb  2 14:48:06 2021
 import os
 from netpyne import sim
 
-# Make sure output directory exists
-output_dir = 'data/v1_batch1/v1_batch1_0_0'
-os.makedirs(output_dir, exist_ok=True)
-
 # Read cfg and netParams from command line arguments if available; otherwise use default
 simConfig, netParams = sim.readCmdLineArgs(simConfigDefault='cfg.py', 
                                            netParamsDefault='netParams.py')
+
+# Make sure output directory exists
+output_dir = simConfig.saveFolder
+os.makedirs(output_dir, exist_ok=True)
 
 # Create network and run simulation
 sim.createSimulateAnalyze(netParams=netParams, simConfig=simConfig)

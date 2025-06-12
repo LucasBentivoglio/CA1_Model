@@ -141,20 +141,18 @@ cfg.saveFileStep = 1000 # step size in ms to save data to disk
 
 
 cfg.analysis['plotRaster'] = {
-    'include': ['PYR_pop', 'PVBC_pop', 'OLM_pop'], #'artif_pyr', 
+    'include': ['PYR_pop', 'PVBC_pop', 'OLM_pop'],
     'marker': 'o',
     'saveFig': True,
-    'filename': 'data/v1_batch1/v1_batch1_0_0/plotRaster.png',
+    'filename': cfg.saveFolder + '/plotRaster.png',
     'showFig': False,
     'markerSize': 6
 }
 
-cfg.recordTraces['V_soma'] = {'sec': 'soma_0', 'loc': 0.5, 'var': 'v'}
-
 cfg.analysis['plotTraces'] = {
     'include': list(range(4)),
     'saveFig': True,
-    'filename': 'data/v1_batch1/v1_batch1_0_0/plotTraces.png',
+    'filename': cfg.saveFolder + '/plotTraces.png',
     'showFig': False
 }
     
