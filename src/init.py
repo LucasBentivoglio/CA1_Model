@@ -9,8 +9,8 @@ import os
 from netpyne import sim
 
 # Read cfg and netParams from command line arguments if available; otherwise use default
-simConfig, netParams = sim.readCmdLineArgs(simConfigDefault='scr/cfg.py', 
-                                           netParamsDefault='scr/netParams.py')
+simConfig, netParams = sim.readCmdLineArgs(simConfigDefault='src/cfg.py', 
+                                           netParamsDefault='src/netParams.py')
 
 # Make sure output directory exists
 output_dir = simConfig.saveFolder
