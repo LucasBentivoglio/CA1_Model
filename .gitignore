@@ -5,7 +5,7 @@
 # --- Pastas a serem completamente ignoradas ---
 # Estas pastas e todo o seu conteúdo não serão rastreados pelo Git.
 results/
-notebooks/*
+notebooks/
 
 
 # --- Pastas com conteúdo ignorado (mas a pasta é mantida) ---
