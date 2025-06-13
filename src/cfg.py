@@ -154,7 +154,7 @@ cfg.recordTraces['V_soma'] = {
     'var': 'v',
     'conds': {         
         'pop': 'PYR_pop',
-        'cellList': range(5) 
+        'cellList': list(range(5)) 
     }
 }
 
