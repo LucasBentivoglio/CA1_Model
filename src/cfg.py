@@ -159,7 +159,7 @@ cfg.analysis['plotTraces'] = {
 # ===================================================================================
 # Saving Configuration
 # ===================================================================================
-cfg.simLabel = 'v2_batch0'
+cfg.simLabel = 'v1_batch0'
 cfg.saveFolder = f'data/processed/{cfg.simLabel}'
 cfg.filename = ''
 cfg.savePickle = True
