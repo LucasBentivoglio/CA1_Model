@@ -2,49 +2,44 @@
 # .gitignore for NetPyNE Simulation Project
 # ============================================================================
 
-# --- Data and Results ---
-# Ignore all processed data. The repository should only contain the code
-# to generate the data, not the data itself.
-data/processed/
-
-# Ignore large raw data files if they are too big for GitHub.
-# Uncomment the line below if your .hoc files are very large or you
-# prefer not to track them.
-# data/raw/
+# --- Pastas a serem completamente ignoradas ---
+# Estas pastas e todo o seu conteúdo não serão rastreados pelo Git.
+results/
+notebooks/
 
 
-# --- Python and Environment Files ---
-# Ignore Python cache files
+# --- Pastas com conteúdo ignorado (mas a pasta é mantida) ---
+# Ignora todo o conteúdo (*) dentro de 'data/processed'.
+# A negação (!) para o arquivo .gitkeep garante que o Git rastreie a
+# pasta 'processed', mantendo-a vazia no repositório.
+data/processed/*
+!data/processed/.gitkeep
+
+
+# --- Arquivos de Cache e Ambiente Python ---
 __pycache__/
 *.pyc
-
-# Ignore virtual environment folders (a common practice)
 venv/
 env/
 .venv/
 .env/
 
 
-# --- Jupyter Notebook Files ---
-# Ignore Jupyter Notebook checkpoints
-.ipynb_checkpoints/
-
-
-# --- Operating System Files ---
-# Ignore macOS specific files
+# --- Arquivos de Sistema Operacional ---
 .DS_Store
-
-# Ignore Windows specific files
 Thumbs.db
 
 
-# --- Simulation Output Files ---
-# Ignore SLURM output and error files
+# --- Arquivos de Saída da Simulação ---
+# Ignora os arquivos de log e erro do SLURM
 *.run
 *.err
 *.out
 
 
-# --- NetPyNE Specific ---
-# Ignore compiled mechanism files
+# --- Arquivos Específicos do NetPyNE ---
+# Ignora os mecanismos compilados
 x86_64/
+
+# Ignora os checkpoints do Jupyter Notebook (caso use em outro lugar)
+.ipynb_checkpoints/
