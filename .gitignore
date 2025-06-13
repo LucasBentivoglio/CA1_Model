@@ -1,0 +1,50 @@
+# ============================================================================
+# .gitignore for NetPyNE Simulation Project
+# ============================================================================
+
+# --- Data and Results ---
+# Ignore all processed data. The repository should only contain the code
+# to generate the data, not the data itself.
+data/processed/
+
+# Ignore large raw data files if they are too big for GitHub.
+# Uncomment the line below if your .hoc files are very large or you
+# prefer not to track them.
+# data/raw/
+
+
+# --- Python and Environment Files ---
+# Ignore Python cache files
+__pycache__/
+*.pyc
+
+# Ignore virtual environment folders (a common practice)
+venv/
+env/
+.venv/
+.env/
+
+
+# --- Jupyter Notebook Files ---
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+
+# --- Operating System Files ---
+# Ignore macOS specific files
+.DS_Store
+
+# Ignore Windows specific files
+Thumbs.db
+
+
+# --- Simulation Output Files ---
+# Ignore SLURM output and error files
+*.run
+*.err
+*.out
+
+
+# --- NetPyNE Specific ---
+# Ignore compiled mechanism files
+x86_64/

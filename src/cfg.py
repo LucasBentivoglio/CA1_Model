@@ -135,7 +135,6 @@ cfg.distributeSynsUniformly = False
 cfg.connRandomSecFromList = True
 
 cfg.recordStep = 1 			# Step size in ms to save data (eg. V traces, LFP, etc)
-cfg.savePickle = False 		# Save params, network and sim output to pickle file
 cfg.saveFileStep = 1000 # step size in ms to save data to disk
 
 
@@ -149,8 +148,18 @@ cfg.analysis['plotRaster'] = {
     'markerSize': 6
 }
 
+cfg.recordTraces['V_soma'] = {
+    'sec': 'soma',
+    'loc': 0.5,
+    'var': 'v',
+    'conds': {         
+        'pop': 'PYR_pop',
+        'cellList': range(5) 
+    }
+}
+
 cfg.analysis['plotTraces'] = {
-    'include': list(range(4)),
+    'include': [('PYR_pop', i) for i in range(5)],
     'saveFig': True,
     'filename': cfg.saveFolder + '/plotTraces.png',
     'showFig': False
