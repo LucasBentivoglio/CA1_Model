@@ -156,8 +156,21 @@ cfg.analysis['plotTraces'] = {
     'showFig': False
 }
     
-cfg.saveJson = False
-cfg.saveCfgJson = False
+# ===================================================================================
+# Saving Configuration
+# ===================================================================================
+cfg.simLabel = 'v2_batch0'
+cfg.saveFolder = f'data/processed/{cfg.simLabel}'
+cfg.filename = ''
 cfg.savePickle = True
-cfg.saveCfgPickle = True
+cfg.saveJson = False
+cfg.saveDataInclude = ['simData', 'simConfig', 'net', 'netParams']
+
+cfg.backupCfgFile = None
+cfg.gatherOnlySimData = False
+cfg.saveCellSecs = False
+cfg.saveCellConns = False
+# ===================================================================================
+# Seeds for reproducibility
+# ===================================================================================
 cfg.seeds = {'conn': cfg.seedval + 7515, 'stim': cfg.seedval + 84331, 'loc': cfg.seedval + 943}
