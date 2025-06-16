@@ -70,7 +70,7 @@ def batchTauWeight():
             'script': 'src/init.py',
             'mpiCommand': 'mpirun',
             'custom': '#SBATCH --mem=240G\n#SBATCH --export=ALL\n#SBATCH --partition=compute',
-            'skip': True
+            'skip': False
         }
     # else:
     #     b.runCfg = {
