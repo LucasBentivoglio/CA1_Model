@@ -16,11 +16,11 @@ cfg.starttime = 0
 cfg.seedval = 42
 
 cfg.pyrpopsize = 480
-cfg.pcscalenum = 20 # control how densely connected this neurons are.
+cfg.pcscalenum = 20 
 cfg.pvbcpopsize = 20
-cfg.pvscalenum = 1 # control how densely connected this neurons are.
+cfg.pvscalenum = 1
 cfg.olmpopsize = 20
-cfg.olmscalenum = 1 # control how densely connected this neurons are.
+cfg.olmscalenum = 1 
 
 cfg.connectPC2PC = False # False
 cfg.connectPVBC2PVBC = False # False
@@ -128,7 +128,7 @@ cfg.artifpyrpars['artifsynfact'] = 6
 
 cfg.cvode_active = True
 cfg.dt = 0.025
-cfg.hParams = {'v_init': -65, 'celsius': 34} #, 'clamp_resist': 0.001
+cfg.hParams = {'v_init': -65, 'celsius': 34} #, 'clamp_resist': 0.001}
 cfg.verbose = False
 
 cfg.distributeSynsUniformly = False
@@ -139,47 +139,31 @@ cfg.saveFileStep = 1000 # step size in ms to save data to disk
 
 
 
-cfg.analysis['plotRaster'] = {
-    'include': ['PYR_pop', 'PVBC_pop', 'OLM_pop'],
-    'marker': 'o',
-    'saveFig': True,
-    'filename': cfg.saveFolder + '/plotRaster.png',
-    'showFig': False,
-    'markerSize': 6
-}
+cfg.analysis['plotRaster'] = { #'saveData': 'raster_data_' + str(runnum) + '.json', 
+                              'include': ['PYR_pop', 'PVBC_pop', 'OLM_pop'],
+                                    'marker': 'o',
+                                    'saveFig': True, 
+                                    'showFig': False, 
+                                    'markerSize': 6}
 
-cfg.recordTraces['V_soma'] = {
-    'sec': 'soma',
-    'loc': 0.5,
-    'var': 'v',
-    'conds': {         
-        'pop': 'PYR_pop',
-        'cellList': list(range(5)) 
-    }
-}
 
-cfg.analysis['plotTraces'] = {
-    'include': [('PYR_pop', i) for i in range(5)],
-    'saveFig': True,
-    'filename': cfg.saveFolder + '/plotTraces.png',
-    'showFig': False
-}
+cfg.recordTraces['V_soma'] = {'sec':'soma_0','loc':0.5,'var':'v'}
+
+ 
     
-# ===================================================================================
-# Saving Configuration
-# ===================================================================================
-cfg.simLabel = 'v1_batch0'
-cfg.saveFolder = f'data/processed/{cfg.simLabel}'
-cfg.filename = ''
-cfg.savePickle = True
-cfg.saveJson = False
-cfg.saveDataInclude = ['simData', 'simConfig', 'net', 'netParams']
+cfg.analysis['plotTraces'] = { 
+                                        'include': [['PYR_pop', i]for i in range(5)], 
+                                        'saveFig': True, 
+                                        'showFig': False,
+                                 
+                                        } # Plot cell traces 
 
-cfg.backupCfgFile = None
-cfg.gatherOnlySimData = False
-cfg.saveCellSecs = False
-cfg.saveCellConns = False
-# ===================================================================================
-# Seeds for reproducibility
-# ===================================================================================
+    
+cfg.saveJson = True
+cfg.savePickle = False
+cfg.saveDataInclude = ['simData', 'simConfig', 'net', 'netParams'] # Save simData, simConfig and netParams objects in data file 
+cfg.backupCfg = False # Save a copy of the cfg file in the data folder
+cfg.gatherOnlySimData = False # Gather only simData (not netParams or simConfig) when running in parallel
+cfg.saveCellSecs = False # Save cell sections in simData (useful for plotting cell morphologies)
+cfg.saveCellConns = False # Save cell connections in simData (useful for plotting cell connections)
 cfg.seeds = {'conn': cfg.seedval + 7515, 'stim': cfg.seedval + 84331, 'loc': cfg.seedval + 943}

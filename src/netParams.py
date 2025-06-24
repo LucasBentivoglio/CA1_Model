@@ -5,20 +5,15 @@ Created on Tue Feb  9 14:18:01 2021
 
 @author: adam
 """
-
 import sys
 import os
-
-project_root = os.getcwd()
-if project_root not in sys.path:
-    sys.path.append(project_root)
-
-
 from netpyne import specs
 import numpy as np
 import random
 
-from src import t3funcs as t3f  # import t3f module for artifical populations
+from src import t3funcs as t3f
+
+
 
 try:
     from __main__ import cfg  # import SimConfig object with params from parent module
@@ -26,10 +21,19 @@ except:
     from cfg import cfg  # if no simConfig in parent module, import directly from tut8_cfg module
 
 
+
+
+
+
+
 netParams = specs.NetParams()  
     
+
 np.random.seed(cfg.seedval)
 random.seed(cfg.seedval)
+
+
+
 
 somator=True
 

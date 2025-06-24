@@ -5,16 +5,14 @@ Created on Tue Feb  2 14:48:06 2021
 
 @author: adam
 """
-import os
+# from neuron import h
+# h.nrnmpi_init()
+
 from netpyne import sim
 
-# Read cfg and netParams from command line arguments if available; otherwise use default
+# read cfg and netParams from command line arguments if available; otherwise use default
 simConfig, netParams = sim.readCmdLineArgs(simConfigDefault='src/cfg.py', 
                                            netParamsDefault='src/netParams.py')
-
-# Make sure output directory exists
-output_dir = simConfig.saveFolder
-os.makedirs(output_dir, exist_ok=True)
 
 # Create network and run simulation
 sim.createSimulateAnalyze(netParams=netParams, simConfig=simConfig)
