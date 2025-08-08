@@ -18,14 +18,14 @@ def batchTauWeight():
     seedbase = 576667
     
     #params['artifperpyr'] = [130 + x*4 for x in range(20)] 
-    params['artifperpyr'] = [140]
+    params['artifperpyr'] = [240]
     params['seedval'] = list(range(0 + seedbase, 100 + seedbase, 100)) 
     
     b = Batch(params=params, cfgFile='src/cfg.py', netParamsFile='src/netParams.py',)
 
  
-    b.batchLabel = 'v1_batch1'
-    b.saveFolder = 'data/v1_batch1'
+    b.batchLabel = 'v1_batch0'
+    b.saveFolder = 'data/v1_batch0'
     b.method = 'grid'
     
     doslurm = True    
@@ -38,7 +38,7 @@ def batchTauWeight():
             'nodes': 8,
             'coresPerNode': 128,
             'email': 'lucas16edu@gmail.com',
-            'folder': '/home/lbentivoglio/CA1_Model_Teste/',
+            'folder': '/home/lbentivoglio/CA1_Model/',
             'script': 'src/init.py',
             'mpiCommand': 'mpirun',
             'custom': '#SBATCH --mem=240G\n#SBATCH --export=ALL\n#SBATCH --partition=compute',
