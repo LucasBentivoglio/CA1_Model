@@ -24,8 +24,8 @@ def batchTauWeight():
     b = Batch(params=params, cfgFile='src/cfg.py', netParamsFile='src/netParams.py',)
 
  
-    b.batchLabel = 'v1_batch0'
-    b.saveFolder = 'data/v1_batch0'
+    b.batchLabel = 'v1_batch1'
+    b.saveFolder = 'data/v1_batch1'
     b.method = 'grid'
     
     doslurm = True    

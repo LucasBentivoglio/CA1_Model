@@ -15,11 +15,11 @@ cfg.duration = 1000
 cfg.starttime = 0
 cfg.seedval = 42
 
-cfg.pyrpopsize = 480
+cfg.pyrpopsize = 48
 cfg.pcscalenum = 20 
-cfg.pvbcpopsize = 20
+cfg.pvbcpopsize = 2
 cfg.pvscalenum = 1
-cfg.olmpopsize = 20
+cfg.olmpopsize = 2
 cfg.olmscalenum = 1 
 
 cfg.connectPC2PC = False # False
